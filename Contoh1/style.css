@@ -20,7 +20,90 @@ body{
                 0 18px 36px -6px rgba(0, 0, 0, 0.1);
 }
 
+.container .title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container form input{
+    display: none;
+}
+
+.container form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.category label{
+    width: 100%;
+    height: 65px;
+
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+label:nth-child(2), label:nth-child(3){
+    margin: 15px 0;
+}
+
+#visa:checked ~ .category .visaMethod,
+#mastercard:checked ~ .category .mastercardMethod,
+#paypal:checked ~ .category .paypalMethod,
+#AMEX:checked ~ .category .amexMethod{
+    box-shadow: 0px 0px 0px 1px #6064b6; /* Untuk Menampilkan shadow ditiap box pembayaran */
+}
+
+#visa:checked ~ .category .visaMethod .check,
+#mastercard:checked ~ .category .mastercardMethod .check,
+#paypal:checked ~ .category .paypalMethod .check,
+#AMEX:checked ~ .category .amexMethod .check{
+    display: block; /* Untuk Menampilkan check yang sebelumnya di hilangkan (display:none) */
+}
+
+label .imgName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgName span{
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgName .imgContainer{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img{
     width: 50px;
     height: auto;
+}
+
+.visa img{
+   width: 60px; /* Untuk Mengatur (Kecil/Besar) Ukuran Gambar */
+   margin-left: 3px; /* Untuk Mengatur (Margin Kiri) Gambar */
+}
+
+.paypal img{
+    width: 70px; /* Untuk Mengatur (Kecil/Besar) Ukuran Gambar */
+}
+
+.AMEX img{
+    width: 45px; /* Untuk Mengatur (Kecil/Besar) Ukuran Gambar */
+}
+
+.check{
+    display: none;
+}
+
+.check i{
+    font-size: 18px;
 }
